@@ -1,0 +1,100 @@
+{
+  "user_id": "Defensif",
+  "month": "2026-04",
+  "direction": "acheteur",
+  "consensus": "3/3",
+  "generated_at": "2026-04-12 19:27",
+  "total_runs": 3,
+  "triggers_pause": [
+    {
+      "condition": "Si oil_wti ≥ 105 : Suspendre tous les achats restants du mois",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "oil_wti"
+      ],
+      "threshold": 105.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si vix ≥ 25 : Suspendre ETF Core et ETF thématiques",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 25.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si btc_price_eur ≤ 58000 : Stop achats crypto, conserver reliquat cash pour capitulation plus profonde",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_price_eur"
+      ],
+      "threshold": 58000.0,
+      "direction": "below"
+    },
+    {
+      "condition": "Si btc_nasdaq_corr ≥ 0.65 : Suspendre achats crypto semaines 3-4 (perte de décorrélation)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_nasdaq_corr"
+      ],
+      "threshold": 0.65,
+      "direction": "above"
+    },
+    {
+      "condition": "Si btc_price_eur ≤ 57000 : Suspendre toutes les tranches crypto restantes",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_price_eur"
+      ],
+      "threshold": 57000.0,
+      "direction": "below"
+    },
+    {
+      "condition": "— : Prochain CPI US avril / communication Fed : si surprise inflationniste ou ton hawkish, annuler semaine 4",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    },
+    {
+      "condition": "— : Prochain CPI US : si surprise haussière énergie, décaler semaine suivante",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    },
+    {
+      "condition": "Si contagion ≥ 20 : Geler tout nouveau déploiement jusqu'à retour en zone CALM",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "contagion"
+      ],
+      "threshold": 20.0,
+      "direction": "above"
+    }
+  ],
+  "triggers_acceleration": [],
+  "notes": "TEST E2E mock — Defensif derived from Cyril session"
+}
