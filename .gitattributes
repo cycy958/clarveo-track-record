@@ -1,0 +1,7 @@
+# Track record : preuve cryptographique infalsifiable.
+# Git ne doit JAMAIS convertir les fins de ligne (CRLF↔LF) ni l'encodage
+# au commit/push : sinon le hash SHA-256 listé dans
+# track_record_<profile>.sha256 ne correspond plus aux bytes effectivement
+# publiés sur GitHub, et la chaîne de vérification (sha256sum -c puis
+# ots verify) casse pour les vérificateurs tiers.
+* -text
