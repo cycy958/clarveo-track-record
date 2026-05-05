@@ -1,5 +1,12 @@
 # clarveo-track-record
 
+> **État au 5 mai 2026 : aucun mois encore publié.**
+> La première publication aura lieu le **1er juin 2026** et contiendra
+> les recommandations du mois de mai. Cette fenêtre de réserve d'un
+> mois fait partie de la garantie de transparence : un signal ne peut
+> pas être réécrit a posteriori en fonction de l'évolution du marché.
+> Voir le calendrier ci-dessous.
+
 Track record public et infalsifiable des recommandations algorithmiques
 publiées par [Clarveo](https://getclarveo.com).
 
