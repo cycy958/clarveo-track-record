@@ -1,0 +1,154 @@
+{
+  "user_id": "TresOffensif",
+  "month": "2026-05",
+  "direction": "acheteur",
+  "consensus": "3/3",
+  "generated_at": "2026-05-03 18:32",
+  "total_runs": 3,
+  "triggers_pause": [
+    {
+      "condition": "Si contagion ≥ 40 : Suspendre toutes tranches crypto restantes (passage ELEVATED→HIGH)",
+      "source_runs": 3,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "contagion"
+      ],
+      "threshold": 40.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si vix ≥ 25 : Suspendre achats : régime risk-on simple invalidé",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 25.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si oil_wti ≥ 115 : Suspendre achats : confirmation choc inflation pétrole",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "oil_wti"
+      ],
+      "threshold": 115.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si stablecoin_depeg ≥ 1.0 : Suspendre achats : stress stablecoin au-delà du bruit",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "stablecoin_depeg"
+      ],
+      "threshold": 1.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si btc_nasdaq_corr ≥ 0.97 : Suspendre achats : corrélation extrême confirmée, double exposition réelle",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_nasdaq_corr"
+      ],
+      "threshold": 0.97,
+      "direction": "above"
+    },
+    {
+      "condition": "— : Publication CPI US / communication Fed : si choc inflation confirmé, suspendre tranches restantes",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    },
+    {
+      "condition": "Si sopr ≤ 0.98 : Stop achats crypto (bascule on-chain en pertes réalisées)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "sopr"
+      ],
+      "threshold": 0.98,
+      "direction": "below"
+    },
+    {
+      "condition": "Si btc_price_eur ≤ 60000 : Stop achats crypto (rupture support psychologique)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_price_eur"
+      ],
+      "threshold": 60000.0,
+      "direction": "below"
+    },
+    {
+      "condition": "Si rsi_smh ≥ 82 : Réviser triggers ACCEL ETF (surchauffe extrême tech)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "rsi_smh"
+      ],
+      "threshold": 82.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si btc_nasdaq_corr ≥ 0.90 : Maintenir interdiction d'achat ETF tant que crypto en DCA",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_nasdaq_corr"
+      ],
+      "threshold": 0.9,
+      "direction": "above"
+    },
+    {
+      "condition": "Si vix ≥ 22 : Suspendre semaines DCA restantes, attendre normalisation",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 22.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si oil_wti ≥ 110 : Suspendre achats crypto et equity, risque inflation prioritaire",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "oil_wti"
+      ],
+      "threshold": 110.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si us10y ≥ 4.75 : Stop achats restants, risque repricing duration",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "us10y"
+      ],
+      "threshold": 4.75,
+      "direction": "above"
+    }
+  ],
+  "triggers_acceleration": []
+}

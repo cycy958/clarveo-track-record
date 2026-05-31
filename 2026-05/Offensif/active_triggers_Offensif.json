@@ -1,0 +1,176 @@
+{
+  "user_id": "Offensif",
+  "month": "2026-05",
+  "direction": "acheteur",
+  "consensus": "3/3",
+  "generated_at": "2026-05-03 18:08",
+  "total_runs": 3,
+  "triggers_pause": [
+    {
+      "condition": "Si contagion ≥ 40 : Suspendre tous les DCA restants — passage ELEVATED → HIGH",
+      "source_runs": 3,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "contagion"
+      ],
+      "threshold": 40.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si vix ≥ 25 : Geler les DCA — régime Risk-On invalidé",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 25.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si oil_wti ≥ 110 : Suspendre toute entrée — risque inflation/taux renforcé",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "oil_wti"
+      ],
+      "threshold": 110.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si btc_price_eur ≤ 60000 : Stop achats market — attendre stabilisation 48h sous niveau psychologique",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_price_eur"
+      ],
+      "threshold": 60000.0,
+      "direction": "below"
+    },
+    {
+      "condition": "Si btc_nasdaq_corr ≥ 0.97 : Geler DCA — corrélation au-delà du percentile 100e historique, risque concentré non couvert",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_nasdaq_corr"
+      ],
+      "threshold": 0.97,
+      "direction": "above"
+    },
+    {
+      "condition": "Si stablecoin_depeg ≤ 0.999 : Pause systémique — signal stress flux crypto",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "stablecoin_depeg"
+      ],
+      "threshold": 0.999,
+      "direction": "below"
+    },
+    {
+      "condition": "Si stablecoin_depeg ≥ 1.0 : Stop achats crypto jusqu'à normalisation",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "stablecoin_depeg"
+      ],
+      "threshold": 1.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si us10y ≥ 4.70 : Suspendre achats : repricing Fed défavorable",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "us10y"
+      ],
+      "threshold": 4.7,
+      "direction": "above"
+    },
+    {
+      "condition": "Si btc_nasdaq_corr ≥ 0.95 : Si corrélation reste extrême ET Nasdaq corrige, suspendre",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_nasdaq_corr"
+      ],
+      "threshold": 0.95,
+      "direction": "above"
+    },
+    {
+      "condition": "— : Prochaine publication CPI US : si surprise inflationniste, suspendre semaines restantes",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    },
+    {
+      "condition": "Si btc_nasdaq_corr ≥ 0.98 : Suspendre accélération crypto (corrélation quasi parfaite, diversification nulle)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_nasdaq_corr"
+      ],
+      "threshold": 0.98,
+      "direction": "above"
+    },
+    {
+      "condition": "Si rsi_btc ≥ 75 : Suspendre achats crypto (surachat, invalide la thèse \"pas d'euphorie\")",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "rsi_btc"
+      ],
+      "threshold": 75.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si funding_btc ≥ 15 : Suspendre achats crypto (bascule levier long, signal d'euphorie spéculative)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "funding_btc"
+      ],
+      "threshold": 15.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si btc_price_eur ≥ 80000 : Suspendre achats limit semaines 2-4 (rallye non confirmé par fondamentaux)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_price_eur"
+      ],
+      "threshold": 80000.0,
+      "direction": "above"
+    },
+    {
+      "condition": "— : Annonce Fed (Powell→Warsh, mai 2026) + CPI/Fed meeting : si US10Y > 4.7 ou DXY > 102, reporter Semaine 4",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    }
+  ],
+  "triggers_acceleration": []
+}

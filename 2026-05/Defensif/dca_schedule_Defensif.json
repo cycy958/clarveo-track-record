@@ -1,0 +1,191 @@
+{
+  "user_id": "Defensif",
+  "session": "session_2026_05",
+  "month": "2026-05",
+  "direction": "acheteur",
+  "consensus": "3/3",
+  "generated_at": "2026-05-03 13:12",
+  "total_deployment": 1650,
+  "weeks": [
+    {
+      "week": 1,
+      "date_start": "2026-05-04",
+      "date_end": "2026-05-10",
+      "orders": [
+        {
+          "asset": "BTC",
+          "short_name": "Bitcoin",
+          "amount_eur": 100,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "EIMI",
+          "short_name": "Marchés Émergents",
+          "amount_eur": 100,
+          "platform": "PEA ou CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "ETH",
+          "short_name": "Ethereum",
+          "amount_eur": 50,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "SWRD",
+          "short_name": "MSCI World",
+          "amount_eur": 150,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        }
+      ],
+      "total": 400,
+      "conditions": null
+    },
+    {
+      "week": 2,
+      "date_start": "2026-05-11",
+      "date_end": "2026-05-17",
+      "orders": [
+        {
+          "asset": "BTC",
+          "short_name": "Bitcoin",
+          "amount_eur": 100,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "EIMI",
+          "short_name": "Marchés Émergents",
+          "amount_eur": 100,
+          "platform": "PEA ou CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "ETH",
+          "short_name": "Ethereum",
+          "amount_eur": 50,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "SWRD",
+          "short_name": "MSCI World",
+          "amount_eur": 150,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        }
+      ],
+      "total": 400,
+      "conditions": null
+    },
+    {
+      "week": 3,
+      "date_start": "2026-05-18",
+      "date_end": "2026-05-24",
+      "orders": [
+        {
+          "asset": "BTC",
+          "short_name": "Bitcoin",
+          "amount_eur": 100,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "EIMI",
+          "short_name": "Marchés Émergents",
+          "amount_eur": 100,
+          "platform": "PEA ou CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "ETH",
+          "short_name": "Ethereum",
+          "amount_eur": 50,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "SWRD",
+          "short_name": "MSCI World",
+          "amount_eur": 150,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        }
+      ],
+      "total": 400,
+      "conditions": null
+    },
+    {
+      "week": 4,
+      "date_start": "2026-05-25",
+      "date_end": "2026-05-31",
+      "orders": [
+        {
+          "asset": "BTC",
+          "short_name": "Bitcoin",
+          "amount_eur": 150,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "EIMI",
+          "short_name": "Marchés Émergents",
+          "amount_eur": 50,
+          "platform": "PEA ou CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "ETH",
+          "short_name": "Ethereum",
+          "amount_eur": 50,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "SWRD",
+          "short_name": "MSCI World",
+          "amount_eur": 200,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        }
+      ],
+      "total": 450,
+      "conditions": null
+    }
+  ]
+}

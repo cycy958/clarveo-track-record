@@ -1,0 +1,176 @@
+{
+  "user_id": "Equilibre",
+  "month": "2026-05(2)",
+  "direction": "acheteur",
+  "consensus": "3/3",
+  "generated_at": "2026-05-03 14:32",
+  "total_runs": 3,
+  "triggers_pause": [
+    {
+      "condition": "Si contagion ≥ 40 : Suspendre tous achats crypto restants : passage ELEVATED→HIGH",
+      "source_runs": 3,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "contagion"
+      ],
+      "threshold": 40.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si stablecoin_depeg ≥ 1.0 : Suspendre limits crypto : risque exécution prioritaire",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "stablecoin_depeg"
+      ],
+      "threshold": 1.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si rsi_btc ≥ 70 : Stopper DCA BTC/ETH restant : surachat après +17.6% sur 30j",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "rsi_btc"
+      ],
+      "threshold": 70.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si sp500 ≤ -8 : Suspendre achats crypto : corrélation 0.955 = transmission directe",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "sp500"
+      ],
+      "threshold": -8.0,
+      "direction": "below"
+    },
+    {
+      "condition": "cpi_us_release : Suspendre limits non exécutées 48h avant/après publication CPI : pétrole +79.7%/90j = risque inflation",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "cpi_us_release"
+      ],
+      "threshold": null,
+      "direction": "-"
+    },
+    {
+      "condition": "Si btc_nasdaq_corr ≥ 0.97 : Suspendre DCA crypto, interdire tout achat ETF",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_nasdaq_corr"
+      ],
+      "threshold": 0.97,
+      "direction": "above"
+    },
+    {
+      "condition": "Si oil_wti ≥ 115 : Suspendre achats jusqu'à clarification inflation/Fed",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "oil_wti"
+      ],
+      "threshold": 115.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si btc_price_eur ≤ 60000 : Stop achats crypto, réévaluer thèse de recovery",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_price_eur"
+      ],
+      "threshold": 60000.0,
+      "direction": "below"
+    },
+    {
+      "condition": "Si stablecoin_depeg ≥ 0.2 : Suspendre DCA — signal stress liquidité dollar",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "stablecoin_depeg"
+      ],
+      "threshold": 0.2,
+      "direction": "above"
+    },
+    {
+      "condition": "Si fear_greed ≥ 75 : Suspendre DCA crypto — entrée zone Greed = mauvais timing",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "fear_greed"
+      ],
+      "threshold": 75.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si oil_wti ≥ 110 : Suspendre achats : risque réinflation/choc macro",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "oil_wti"
+      ],
+      "threshold": 110.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si vix ≥ 22 : Suspendre achats crypto, conserver cash",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 22.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si dxy ≥ 102 : Suspendre achats crypto : dollar redevenu hostile",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "dxy"
+      ],
+      "threshold": 102.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si fear_greed ≥ 65 : Plus d'achats crypto : sentiment trop complaisant",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "fear_greed"
+      ],
+      "threshold": 65.0,
+      "direction": "above"
+    },
+    {
+      "condition": "— : Publication CPI/PCE US : si surprise inflationniste avec us10y > 4.7, suspendre",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    }
+  ],
+  "triggers_acceleration": []
+}

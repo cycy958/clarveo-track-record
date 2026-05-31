@@ -1,0 +1,198 @@
+{
+  "user_id": "Defensif",
+  "month": "2026-05",
+  "direction": "acheteur",
+  "consensus": "3/3",
+  "generated_at": "2026-05-03 13:12",
+  "total_runs": 3,
+  "triggers_pause": [
+    {
+      "condition": "Si contagion ≥ 40 : Suspendre tous les nouveaux achats ETF Core",
+      "source_runs": 2,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "contagion"
+      ],
+      "threshold": 40.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si vix ≥ 25 : Suspendre les tranches crypto restantes",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 25.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si btc_price_eur ≤ 58000 : Stop achats crypto, attendre stabilisation",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_price_eur"
+      ],
+      "threshold": 58000.0,
+      "direction": "below"
+    },
+    {
+      "condition": "Si fear_greed ≥ 75 : Stop DCA crypto, risque d'euphorie",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "fear_greed"
+      ],
+      "threshold": 75.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si rsi_btc ≥ 72 : Ne pas acheter BTC en surchauffe courte",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "rsi_btc"
+      ],
+      "threshold": 72.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si btc_nasdaq_corr ≥ 70 : Interdire tout achat ETF dans le cycle courant",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_nasdaq_corr"
+      ],
+      "threshold": 70.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si oil_wti ≥ 110 : Geler tout achat equity/tech",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "oil_wti"
+      ],
+      "threshold": 110.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si stablecoin_depeg ≥ 1.0 : Stop tous achats crypto, signal systémique",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "stablecoin_depeg"
+      ],
+      "threshold": 1.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si btc_nasdaq_corr ≥ 0.90 : Maintenir interdiction crypto + equity simultanée",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_nasdaq_corr"
+      ],
+      "threshold": 0.9,
+      "direction": "above"
+    },
+    {
+      "condition": "Si oil_wti ≥ 115 : Suspendre achats equity, risque inflation/taux trop élevé",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "oil_wti"
+      ],
+      "threshold": 115.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si us10y ≥ 4.70 : Suspendre achats ETF Core, duration risk en hausse",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "us10y"
+      ],
+      "threshold": 4.7,
+      "direction": "above"
+    },
+    {
+      "condition": "Si rsi_SWRD ≥ 74 : Suspendre les tranches SWRD restantes",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "rsi_SWRD"
+      ],
+      "threshold": 74.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si rsi_EIMI ≥ 72 : Suspendre les tranches EIMI restantes",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "rsi_EIMI"
+      ],
+      "threshold": 72.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si sopr ≤ 0.98 : Suspendre DCA — capitulation on-chain qui précède corrections equity",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "sopr"
+      ],
+      "threshold": 0.98,
+      "direction": "below"
+    },
+    {
+      "condition": "Si stablecoin_depeg ≥ 0.75 : Stop achats crypto : aggravation du depeg BUSD déjà à 0.57% = risque liquidité",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "stablecoin_depeg"
+      ],
+      "threshold": 0.75,
+      "direction": "above"
+    },
+    {
+      "condition": "Si rsi_btc ≥ 70 : Suspendre achats BTC/ETH : passage en surachat, le DCA perd son intérêt",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "rsi_btc"
+      ],
+      "threshold": 70.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si contagion ≥ 80 : Stop total : suspendre tous nouveaux achats",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "contagion"
+      ],
+      "threshold": 80.0,
+      "direction": "above"
+    }
+  ],
+  "triggers_acceleration": []
+}

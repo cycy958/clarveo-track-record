@@ -1,0 +1,119 @@
+{
+  "user_id": "Equilibre",
+  "session": "session_2026_05(2)",
+  "month": "2026-05(2)",
+  "direction": "acheteur",
+  "consensus": "3/3",
+  "generated_at": "2026-05-03 14:32",
+  "total_deployment": 2300,
+  "weeks": [
+    {
+      "week": 1,
+      "date_start": "2026-05-04",
+      "date_end": "2026-05-10",
+      "orders": [
+        {
+          "asset": "BTC",
+          "short_name": "Bitcoin",
+          "amount_eur": 350,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "ETH",
+          "short_name": "Ethereum",
+          "amount_eur": 200,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        }
+      ],
+      "total": 550,
+      "conditions": null
+    },
+    {
+      "week": 2,
+      "date_start": "2026-05-11",
+      "date_end": "2026-05-17",
+      "orders": [
+        {
+          "asset": "BTC",
+          "short_name": "Bitcoin",
+          "amount_eur": 350,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "ETH",
+          "short_name": "Ethereum",
+          "amount_eur": 200,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        }
+      ],
+      "total": 550,
+      "conditions": null
+    },
+    {
+      "week": 3,
+      "date_start": "2026-05-18",
+      "date_end": "2026-05-24",
+      "orders": [
+        {
+          "asset": "BTC",
+          "short_name": "Bitcoin",
+          "amount_eur": 350,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "ETH",
+          "short_name": "Ethereum",
+          "amount_eur": 200,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        }
+      ],
+      "total": 550,
+      "conditions": null
+    },
+    {
+      "week": 4,
+      "date_start": "2026-05-25",
+      "date_end": "2026-05-31",
+      "orders": [
+        {
+          "asset": "BTC",
+          "short_name": "Bitcoin",
+          "amount_eur": 350,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "ETH",
+          "short_name": "Ethereum",
+          "amount_eur": 300,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        }
+      ],
+      "total": 650,
+      "conditions": null
+    }
+  ]
+}
