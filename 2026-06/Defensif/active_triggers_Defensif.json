@@ -1,0 +1,99 @@
+{
+  "user_id": "Defensif",
+  "month": "2026-06",
+  "direction": "acheteur",
+  "consensus": "3/3",
+  "generated_at": "2026-06-07 14:15",
+  "total_runs": 3,
+  "triggers_pause": [
+    {
+      "condition": "Si stablecoin_depeg ≥ 0.75 : Stop achats crypto, conserver uniquement ETF Core défensif",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "stablecoin_depeg"
+      ],
+      "threshold": 0.75,
+      "direction": "above"
+    },
+    {
+      "condition": "Si vix ≥ 25 : Suspendre achats ETF Core — sortie du régime macro mécanique favorable",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 25.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si btc_price_eur ≤ 50000 : Stop achats BTC/ETH jusqu'au prochain run (éviter couteau qui tombe)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_price_eur"
+      ],
+      "threshold": 50000.0,
+      "direction": "below"
+    },
+    {
+      "condition": "Si btc_nasdaq_corr ≥ 0.5 : Suspendre achats crypto — re-corrélation actions, perte du coussin de découplage (R1 angle mort #2)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_nasdaq_corr"
+      ],
+      "threshold": 0.5,
+      "direction": "above"
+    },
+    {
+      "condition": "— : Publications CPI/NFP/Fed : si surprise restrictive et DXY en forte hausse, suspendre les achats risqués",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    },
+    {
+      "condition": "Si dxy ≥ 102 : Suspendre achats risqués — choc de liquidité dollar confirmé (R1 angle mort #3)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "dxy"
+      ],
+      "threshold": 102.0,
+      "direction": "above"
+    },
+    {
+      "condition": "vix : Avant CPI/NFP/FOMC : ne pas accélérer si VIX monte ou US10Y en forte tension",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 22.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si contagion ≥ 40 : Suspendre achats crypto — passage ELEVATED → HIGH",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "contagion"
+      ],
+      "threshold": 40.0,
+      "direction": "above"
+    }
+  ],
+  "triggers_acceleration": []
+}

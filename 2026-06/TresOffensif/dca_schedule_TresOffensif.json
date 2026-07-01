@@ -1,0 +1,174 @@
+{
+  "user_id": "TresOffensif",
+  "session": "session_2026_06",
+  "month": "2026-06",
+  "direction": "acheteur",
+  "consensus": "2/2",
+  "confidence": 0.75,
+  "generated_at": "2026-06-07 20:18",
+  "total_deployment": 3700,
+  "weeks": [
+    {
+      "week": 1,
+      "date_start": "2026-06-08",
+      "date_end": "2026-06-14",
+      "orders": [
+        {
+          "asset": "BTC",
+          "short_name": "Bitcoin",
+          "amount_eur": 350,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "DFEN",
+          "short_name": "Défense",
+          "amount_eur": 150,
+          "platform": "PEA ou CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "EIMI",
+          "short_name": "Marchés Émergents",
+          "amount_eur": 150,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "ETH",
+          "short_name": "Ethereum",
+          "amount_eur": 400,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "SWRD",
+          "short_name": "MSCI World",
+          "amount_eur": 100,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        }
+      ],
+      "total": 1150,
+      "conditions": null
+    },
+    {
+      "week": 2,
+      "date_start": "2026-06-15",
+      "date_end": "2026-06-21",
+      "orders": [
+        {
+          "asset": "BTC",
+          "short_name": "Bitcoin",
+          "amount_eur": 350,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "ETH",
+          "short_name": "Ethereum",
+          "amount_eur": 400,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "SWRD",
+          "short_name": "MSCI World",
+          "amount_eur": 100,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        }
+      ],
+      "total": 850,
+      "conditions": null
+    },
+    {
+      "week": 3,
+      "date_start": "2026-06-22",
+      "date_end": "2026-06-28",
+      "orders": [
+        {
+          "asset": "BTC",
+          "short_name": "Bitcoin",
+          "amount_eur": 350,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "ETH",
+          "short_name": "Ethereum",
+          "amount_eur": 400,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "SWRD",
+          "short_name": "MSCI World",
+          "amount_eur": 100,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        }
+      ],
+      "total": 850,
+      "conditions": null
+    },
+    {
+      "week": 4,
+      "date_start": "2026-06-29",
+      "date_end": "2026-07-05",
+      "orders": [
+        {
+          "asset": "BTC",
+          "short_name": "Bitcoin",
+          "amount_eur": 350,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "ETH",
+          "short_name": "Ethereum",
+          "amount_eur": 300,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "SWRD",
+          "short_name": "MSCI World",
+          "amount_eur": 200,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        }
+      ],
+      "total": 850,
+      "conditions": null
+    }
+  ]
+}

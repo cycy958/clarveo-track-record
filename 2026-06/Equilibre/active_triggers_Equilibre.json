@@ -1,0 +1,99 @@
+{
+  "user_id": "Equilibre",
+  "month": "2026-06",
+  "direction": "acheteur",
+  "consensus": "3/3",
+  "generated_at": "2026-06-07 18:03",
+  "total_runs": 3,
+  "triggers_pause": [
+    {
+      "condition": "Si contagion ≥ 40 : Stopper nouveaux achats crypto (passage HIGH)",
+      "source_runs": 2,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "contagion"
+      ],
+      "threshold": 40.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si vix ≥ 25 : Suspendre achats SWRD (sortie régime calme)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 25.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si stablecoin_depeg ≥ 0.75 : Stopper achats crypto (au-dessus du bruit)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "stablecoin_depeg"
+      ],
+      "threshold": 0.75,
+      "direction": "above"
+    },
+    {
+      "condition": "Si btc_price_eur ≤ 50000 : Stopper le DCA crypto jusqu'à confirmation SOPR/MVRV",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_price_eur"
+      ],
+      "threshold": 50000.0,
+      "direction": "below"
+    },
+    {
+      "condition": "Si btc_nasdaq_corr ≥ 0.5 : Stopper achats crypto (réinversion corrélation → double exposition)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_nasdaq_corr"
+      ],
+      "threshold": 0.5,
+      "direction": "above"
+    },
+    {
+      "condition": "sp500 : Prochaine publication CPI/Fed : si surprise hawkish, suspendre ETF Core et conserver cash",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "sp500"
+      ],
+      "threshold": 0.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si dxy ≥ 103 : Suspendre accélérations crypto (drainage liquidité USD)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "dxy"
+      ],
+      "threshold": 103.0,
+      "direction": "above"
+    },
+    {
+      "condition": "— : Publication inflation/Fed : si surprise hawkish, suspendre accélérations",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    }
+  ],
+  "triggers_acceleration": []
+}

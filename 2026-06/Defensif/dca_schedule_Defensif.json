@@ -1,0 +1,210 @@
+{
+  "user_id": "Defensif",
+  "session": "session_2026_06",
+  "month": "2026-06",
+  "direction": "acheteur",
+  "consensus": "3/3",
+  "confidence": 0.75,
+  "generated_at": "2026-06-07 14:15",
+  "total_deployment": 2500,
+  "weeks": [
+    {
+      "week": 1,
+      "date_start": "2026-06-08",
+      "date_end": "2026-06-14",
+      "orders": [
+        {
+          "asset": "BTC",
+          "short_name": "Bitcoin",
+          "amount_eur": 100,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "CSPX",
+          "short_name": "S&P 500",
+          "amount_eur": 100,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "EIMI",
+          "short_name": "Marchés Émergents",
+          "amount_eur": 100,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "ETH",
+          "short_name": "Ethereum",
+          "amount_eur": 50,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "SWRD",
+          "short_name": "MSCI World",
+          "amount_eur": 300,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "XDWH",
+          "short_name": "Santé",
+          "amount_eur": 100,
+          "platform": "PEA ou CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        }
+      ],
+      "total": 750,
+      "conditions": null
+    },
+    {
+      "week": 2,
+      "date_start": "2026-06-15",
+      "date_end": "2026-06-21",
+      "orders": [
+        {
+          "asset": "BTC",
+          "short_name": "Bitcoin",
+          "amount_eur": 100,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "EIMI",
+          "short_name": "Marchés Émergents",
+          "amount_eur": 100,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "ETH",
+          "short_name": "Ethereum",
+          "amount_eur": 50,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "SWRD",
+          "short_name": "MSCI World",
+          "amount_eur": 300,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        }
+      ],
+      "total": 550,
+      "conditions": null
+    },
+    {
+      "week": 3,
+      "date_start": "2026-06-22",
+      "date_end": "2026-06-28",
+      "orders": [
+        {
+          "asset": "BTC",
+          "short_name": "Bitcoin",
+          "amount_eur": 100,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "EIMI",
+          "short_name": "Marchés Émergents",
+          "amount_eur": 100,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "ETH",
+          "short_name": "Ethereum",
+          "amount_eur": 50,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "SWRD",
+          "short_name": "MSCI World",
+          "amount_eur": 300,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        }
+      ],
+      "total": 550,
+      "conditions": null
+    },
+    {
+      "week": 4,
+      "date_start": "2026-06-29",
+      "date_end": "2026-07-05",
+      "orders": [
+        {
+          "asset": "BTC",
+          "short_name": "Bitcoin",
+          "amount_eur": 150,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "EIMI",
+          "short_name": "Marchés Émergents",
+          "amount_eur": 200,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "ETH",
+          "short_name": "Ethereum",
+          "amount_eur": 50,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "SWRD",
+          "short_name": "MSCI World",
+          "amount_eur": 250,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        }
+      ],
+      "total": 650,
+      "conditions": null
+    }
+  ]
+}

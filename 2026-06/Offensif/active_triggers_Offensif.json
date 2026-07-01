@@ -1,0 +1,88 @@
+{
+  "user_id": "Offensif",
+  "month": "2026-06",
+  "direction": "acheteur",
+  "consensus": "3/3",
+  "generated_at": "2026-06-07 19:43",
+  "total_runs": 3,
+  "triggers_pause": [
+    {
+      "condition": "Si btc_price_eur ≤ 50000 : Suspendre les achats BTC/ETH (cassure seuil psychologique)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_price_eur"
+      ],
+      "threshold": 50000.0,
+      "direction": "below"
+    },
+    {
+      "condition": "Si vix ≥ 28 : Suspendre thématiques, réduire ETF Core à 50%",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 28.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si stablecoin_depeg ≥ 0.75 : Stop total crypto (contagion stablecoin > bruit normal)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "stablecoin_depeg"
+      ],
+      "threshold": 0.75,
+      "direction": "above"
+    },
+    {
+      "condition": "Si dxy ≥ 102 : Suspendre tranches non exécutées (durcissement conditions financières / risque hawkish Fed)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "dxy"
+      ],
+      "threshold": 102.0,
+      "direction": "above"
+    },
+    {
+      "condition": "btc_nasdaq_corr : Réévaluer concentration : décorrélation protectrice perdue",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "btc_nasdaq_corr"
+      ],
+      "threshold": 0.3,
+      "direction": "above"
+    },
+    {
+      "condition": "sp500 : Prochain CPI/FOMC : si surprise hawkish, suspendre les ETF 7 jours",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "sp500"
+      ],
+      "threshold": 0.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si contagion ≥ 40 : Suspendre achats crypto (passage ELEVATED → HIGH)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "contagion"
+      ],
+      "threshold": 40.0,
+      "direction": "above"
+    }
+  ],
+  "triggers_acceleration": []
+}

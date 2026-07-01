@@ -1,0 +1,111 @@
+{
+  "user_id": "TresOffensif",
+  "month": "2026-06",
+  "direction": "acheteur",
+  "consensus": "2/2",
+  "generated_at": "2026-06-07 20:18",
+  "total_runs": 2,
+  "triggers_pause": [
+    {
+      "condition": "Si vix ≥ 25 : Suspendre SWRD et réduire le DCA crypto restant de 50%",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 25.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si stablecoin_depeg ≥ 0.75 : Stop crypto immédiat (stress stablecoin sérieux)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "stablecoin_depeg"
+      ],
+      "threshold": 0.75,
+      "direction": "above"
+    },
+    {
+      "condition": "Si btc_price_eur ≤ 48000 : Stop BTC/ETH restants jusqu'à stabilisation hebdomadaire",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_price_eur"
+      ],
+      "threshold": 48000.0,
+      "direction": "below"
+    },
+    {
+      "condition": "Si dxy ≥ 102 : Suspendre DCA crypto de base si surprise Fed/BCE hawkish confirmée (condition R3)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "dxy"
+      ],
+      "threshold": 102.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si contagion ≥ 40 : Suspendre les achats crypto restants ; conserver le cash",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "contagion"
+      ],
+      "threshold": 40.0,
+      "direction": "above"
+    }
+  ],
+  "triggers_acceleration": [
+    {
+      "condition": "Si rsi_btc ≥ 30 : Ajouter 1 000€ crypto si contagion reste < 40",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "rsi_btc"
+      ],
+      "threshold": 30.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si vix ≤ 18 : Ajouter 500€ SWRD si les marchés actions se calment",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 18.0,
+      "direction": "below"
+    },
+    {
+      "condition": "Si btc_price_eur ≤ 50000 : Ajouter 1 000€ BTC/ETH si contagion <60 (seuil psychologique).",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_price_eur"
+      ],
+      "threshold": 50000.0,
+      "direction": "below"
+    },
+    {
+      "condition": "Si fear_greed ≤ 10 : Ajouter 1 000€ majors si stablecoins OK (panique extrême).",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "fear_greed"
+      ],
+      "threshold": 10.0,
+      "direction": "below"
+    }
+  ]
+}
