@@ -16,26 +16,34 @@ Le manifest `track_record_Equilibre.sha256` reprend ces hashs au format `sha256s
 
 ## Preuve OpenTimestamps
 
-`track_record_Equilibre.sha256.ots` ancre les hashs du manifest sur la blockchain Bitcoin.
+`track_record_Equilibre.sha256.ots` ancre les hashs du manifest `track_record_Equilibre.sha256` sur la blockchain Bitcoin.
 
-### Vérifier localement
+### Vérifier la preuve (recommandé)
+
+Déposez `track_record_Equilibre.sha256.ots` sur https://opentimestamps.org/ avec le manifest
+`track_record_Equilibre.sha256`. Le site confirme le bloc Bitcoin qui horodate le plan, sans
+rien installer, sur n'importe quel système.
+
+### Contrôler l'intégrité des fichiers (optionnel)
+
+```bash
+tr -d '\r' < track_record_Equilibre.sha256 | sha256sum -c -
+```
+
+Le `tr -d '\r'` neutralise les fins de ligne Windows du manifest. Chaque
+fichier scellé doit afficher `OK`.
+
+### Vérifier en ligne de commande (optionnel)
 
 ```bash
 pip install opentimestamps-client
-
-# 1. Intégrité des 3 fichiers contre le manifest
-sha256sum -c track_record_Equilibre.sha256
-
-# 2. (optionnel) Récupérer la preuve Bitcoin complète
-ots upgrade track_record_Equilibre.sha256.ots
-
-# 3. Vérifier la preuve contre le manifest
 ots verify track_record_Equilibre.sha256.ots track_record_Equilibre.sha256
 ```
 
-`ots verify` indique le bloc Bitcoin depuis lequel le manifest n'a pas
-bougé. Le mois qui sépare la génération du plan de sa publication empêche
-de le réécrire en fonction de ce qu'a fait le marché entre-temps.
+`ots verify` indique le bloc Bitcoin depuis lequel le manifest n'a pas bougé.
+Le client `ots` est instable sous Windows : dans ce cas, utilisez le
+vérificateur web ci-dessus. Le mois entre la génération du plan et sa
+publication interdit de le réécrire selon le marché.
 
 ## Résultats du mois
 
