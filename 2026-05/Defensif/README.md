@@ -16,24 +16,19 @@ Le manifest `track_record_Defensif.sha256` reprend ces hashs au format `sha256su
 
 ## Preuve OpenTimestamps
 
-`track_record_Defensif.sha256.ots` ancre les hashs du manifest `track_record_Defensif.sha256` sur la blockchain Bitcoin.
+`track_record_Defensif.sha256.ots` ancre les hashs du manifest `track_record_Defensif.sha256` sur la blockchain Bitcoin. La preuve est autonome : elle se vérifie contre la blockchain seule, sans dépendre d'aucun service en ligne.
 
-### Vérifier la preuve (recommandé)
-
-Déposez `track_record_Defensif.sha256.ots` sur https://opentimestamps.org/ avec le manifest
-`track_record_Defensif.sha256`. Le site confirme le bloc Bitcoin qui horodate le plan, sans
-rien installer, sur n'importe quel système.
-
-### Contrôler l'intégrité des fichiers (optionnel)
+### Contrôler l'intégrité des fichiers
 
 ```bash
 tr -d '\r' < track_record_Defensif.sha256 | sha256sum -c -
 ```
 
 Le `tr -d '\r'` neutralise les fins de ligne Windows du manifest. Chaque
-fichier scellé doit afficher `OK`.
+fichier scellé doit afficher `OK`. Cette vérification ne dépend d'aucun
+service extérieur et reste disponible en permanence.
 
-### Vérifier en ligne de commande (optionnel)
+### Vérifier l'ancrage Bitcoin
 
 ```bash
 pip install opentimestamps-client
@@ -41,9 +36,18 @@ ots verify track_record_Defensif.sha256.ots track_record_Defensif.sha256
 ```
 
 `ots verify` indique le bloc Bitcoin depuis lequel le manifest n'a pas bougé.
-Le client `ots` est instable sous Windows : dans ce cas, utilisez le
-vérificateur web ci-dessus. Le mois entre la génération du plan et sa
-publication interdit de le réécrire selon le marché.
+Le client `ots` est instable sous Windows.
+
+### Vérificateur web (quand il est en ligne)
+
+Vous pouvez aussi déposer `track_record_Defensif.sha256.ots` avec le manifest
+`track_record_Defensif.sha256` sur https://opentimestamps.org/, qui confirme le
+bloc Bitcoin en glisser-déposer sans rien installer. Ce service tiers connaît
+des interruptions ; les deux vérifications ci-dessus, elles, restent
+disponibles.
+
+Le mois entre la génération du plan et sa publication interdit de le réécrire
+selon le marché.
 
 ## Résultats du mois
 
