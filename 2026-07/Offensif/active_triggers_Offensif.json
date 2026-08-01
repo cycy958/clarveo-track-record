@@ -1,0 +1,121 @@
+{
+  "user_id": "Offensif",
+  "month": "2026-07",
+  "direction": "acheteur",
+  "consensus": "3/3",
+  "generated_at": "2026-07-06 01:06",
+  "total_runs": 3,
+  "triggers_pause": [
+    {
+      "condition": "Si funding_btc ≥ 15 : Suspendre achats BTC ; risque de squeeze de longs",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "funding_btc"
+      ],
+      "threshold": 15.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si btc_price_eur ≤ 50000 : Stop achats crypto jusqu'à stabilisation",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_price_eur"
+      ],
+      "threshold": 50000.0,
+      "direction": "below"
+    },
+    {
+      "condition": "Si stablecoin_depeg ≥ 0.75 : Suspendre tous les achats crypto ; risque systémique",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "stablecoin_depeg"
+      ],
+      "threshold": 0.75,
+      "direction": "above"
+    },
+    {
+      "condition": "Si btc_nasdaq_corr ≥ 0.70 : Ne plus acheter crypto et equity la même semaine",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_nasdaq_corr"
+      ],
+      "threshold": 0.7,
+      "direction": "above"
+    },
+    {
+      "condition": "Si dxy ≥ 103 : Suspendre achats EIMI + crypto de la semaine (headwind dollar)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "dxy"
+      ],
+      "threshold": 103.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si vix ≥ 25 : Stopper achats ETF thématiques et crypto ; conserver le cash jusqu'au prochain run",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 25.0,
+      "direction": "above"
+    },
+    {
+      "condition": "gold_usd : Revue humaine avant tranche suivante : vérifier dislocation cross-asset / deleveraging forcé",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "gold_usd"
+      ],
+      "threshold": 3800.0,
+      "direction": "below"
+    },
+    {
+      "condition": "— : CPI/NFP US : surprise inflation ou emploi fort → suspendre une semaine de DCA risqué",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    },
+    {
+      "condition": "— : CPI US / FOMC juillet : si inflation réaccélère ou ton Fed hawkish, suspendre achats risk assets restants",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    },
+    {
+      "condition": "Si contagion ≥ 40 : Suspendre tous les nouveaux achats crypto et ETF risqués",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "contagion"
+      ],
+      "threshold": 40.0,
+      "direction": "above"
+    }
+  ],
+  "triggers_acceleration": []
+}

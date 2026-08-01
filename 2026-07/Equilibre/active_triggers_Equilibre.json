@@ -1,0 +1,99 @@
+{
+  "user_id": "Equilibre",
+  "month": "2026-07",
+  "direction": "acheteur",
+  "consensus": "3/3",
+  "generated_at": "2026-07-05 17:45",
+  "total_runs": 3,
+  "triggers_pause": [
+    {
+      "condition": "us10y : FOMC 28-29/07 : si hawkish ou DXY>105, suspendre semaine 4",
+      "source_runs": 2,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "us10y"
+      ],
+      "threshold": 4.48,
+      "direction": "above"
+    },
+    {
+      "condition": "Si funding_btc ≥ 12 : Suspendre achats BTC/ETH : longs déjà surchargés (10.38%), au-dessus de 12 le risque de long squeeze devient prioritaire",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "funding_btc"
+      ],
+      "threshold": 12.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si vix ≥ 25 : Suspendre thématiques ; conserver Core si liquide",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 25.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si btc_nasdaq_corr ≥ 0.70 : Interdire nouvelle double exposition crypto+actions",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_nasdaq_corr"
+      ],
+      "threshold": 0.7,
+      "direction": "above"
+    },
+    {
+      "condition": "Si btc_price_eur ≤ 50000 : Stop achats BTC : cassure du rebond daily",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_price_eur"
+      ],
+      "threshold": 50000.0,
+      "direction": "below"
+    },
+    {
+      "condition": "Si dxy ≥ 105 : Suspendre crypto et Nasdaq-like : scénario dollar fort",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "dxy"
+      ],
+      "threshold": 105.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si stablecoin_depeg ≥ 0.75 : Stop total crypto jusqu'au retour du peg",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "stablecoin_depeg"
+      ],
+      "threshold": 0.75,
+      "direction": "above"
+    },
+    {
+      "condition": "— : CPI US mi-juillet + FOMC 28-29/07 : si print CPI chaud ou ton hawkish confirmé, geler toutes les accélérations",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    }
+  ],
+  "triggers_acceleration": []
+}

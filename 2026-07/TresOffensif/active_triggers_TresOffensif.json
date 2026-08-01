@@ -1,0 +1,88 @@
+{
+  "user_id": "TresOffensif",
+  "month": "2026-07",
+  "direction": "acheteur",
+  "consensus": "3/3",
+  "generated_at": "2026-07-06 01:46",
+  "total_runs": 3,
+  "triggers_pause": [
+    {
+      "condition": "Si contagion ≥ 40 : Suspendre tous nouveaux achats crypto et ETF thématiques (passage CALM→HIGH)",
+      "source_runs": 2,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "contagion"
+      ],
+      "threshold": 40.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si vix ≥ 25 : Suspendre achats ETF, crypto uniquement sur limites profondes",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 25.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si sopr ≤ 0.98 : Suspendre BTC/ETH : marché de nouveau en pertes latentes",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "sopr"
+      ],
+      "threshold": 0.98,
+      "direction": "below"
+    },
+    {
+      "condition": "Si funding_btc ≥ 12 : Suspendre achats crypto : rally trop dépendant du levier",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "funding_btc"
+      ],
+      "threshold": 12.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si btc_nasdaq_corr ≥ 0.5 : Suspendre achats ETF Core : double exposition risk-on, coussin décorrélation perdu",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_nasdaq_corr"
+      ],
+      "threshold": 0.5,
+      "direction": "above"
+    },
+    {
+      "condition": "Si btc_price_eur ≤ 52000 : Suspendre achats BTC/ETH : échec du rebond sous zone J-7/J-30",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_price_eur"
+      ],
+      "threshold": 52000.0,
+      "direction": "below"
+    },
+    {
+      "condition": "us10y : Publication CPI/emploi US : arbitrage humain avant accélération",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "us10y"
+      ],
+      "threshold": 0.0,
+      "direction": "above"
+    }
+  ],
+  "triggers_acceleration": []
+}

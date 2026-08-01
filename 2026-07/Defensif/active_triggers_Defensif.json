@@ -1,0 +1,110 @@
+{
+  "user_id": "Defensif",
+  "month": "2026-07",
+  "direction": "acheteur",
+  "consensus": "3/3",
+  "generated_at": "2026-07-05 16:29",
+  "total_runs": 3,
+  "triggers_pause": [
+    {
+      "condition": "fear_greed : FOMC 28-29/07 : si hausse/ton hawkish, suspendre achats semaine 4 (proxy EVENT)",
+      "source_runs": 2,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "fear_greed"
+      ],
+      "threshold": 29.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si funding_btc ≥ 12 : Stop achats BTC — levier déjà surchauffé à 10.38%",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "funding_btc"
+      ],
+      "threshold": 12.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si btc_price_eur ≤ 52000 : Stop achats crypto — le rebond échoue",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_price_eur"
+      ],
+      "threshold": 52000.0,
+      "direction": "below"
+    },
+    {
+      "condition": "Si vix ≥ 24 : Suspendre les achats ETF restants (retour zone J-90 24.17, rupture du calme)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 24.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si stablecoin_depeg ≥ 0.75 : Suspendre toute crypto — au-dessus du bruit normal 0.1-0.3%",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "stablecoin_depeg"
+      ],
+      "threshold": 0.75,
+      "direction": "above"
+    },
+    {
+      "condition": "Si rsi_xdwh ≥ 80 : Skip la tranche XDWH de la semaine — surachat aggravé",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "rsi_xdwh"
+      ],
+      "threshold": 80.0,
+      "direction": "above"
+    },
+    {
+      "condition": "vix : (repère) marché calme confirmé pour poursuivre le DCA",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 22.0,
+      "direction": "below"
+    },
+    {
+      "condition": "Si btc_nasdaq_corr ≥ 0.70 : Suspendre double exposition actions/crypto (diversif insuffisante profil défensif)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_nasdaq_corr"
+      ],
+      "threshold": 0.7,
+      "direction": "above"
+    },
+    {
+      "condition": "Si dxy ≥ 105 : Suspendre achats actifs risqués (régime macro invalidé)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "dxy"
+      ],
+      "threshold": 105.0,
+      "direction": "above"
+    }
+  ],
+  "triggers_acceleration": []
+}
