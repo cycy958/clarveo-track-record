@@ -30,8 +30,9 @@ rien installer, sur n'importe quel système.
 tr -d '\r' < track_record_Offensif.sha256 | sha256sum -c -
 ```
 
-Le `tr -d '\r'` neutralise les fins de ligne Windows du manifest. Chaque
-fichier scellé doit afficher `OK`.
+Le `tr -d '\r'` retire d'éventuelles fins de ligne Windows du manifest. Il ne
+change rien quand il n'y en a pas, donc cette forme fonctionne quel que soit le
+fichier. Chaque fichier scellé doit afficher `OK`.
 
 ### Vérifier en ligne de commande (optionnel)
 
@@ -45,14 +46,9 @@ Le client `ots` est instable sous Windows : dans ce cas, utilisez le
 vérificateur web ci-dessus. Le mois entre la génération du plan et sa
 publication interdit de le réécrire selon le marché.
 
-## Résultats du mois
+## Les résultats
 
-- Capital initial : 20 000,00 €
-- Total investi : 10 193,57 €
-- Valeur des positions : 9 672,01 €
-- Rendement : -5,12 % (DCA miroir : -2,43 %)
-- Triggers déclenchés : 0
-
-## Suivi en direct
+Ils ne sont pas dans ce dépôt, qui porte les décisions et leurs preuves.
+Rendements, pertes maximales et comparaison avec un investissement automatique :
 
 https://getclarveo.com/performance/

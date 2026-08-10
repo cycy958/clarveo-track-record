@@ -16,19 +16,25 @@ Le manifest `track_record_Equilibre.sha256` reprend ces hashs au format `sha256s
 
 ## Preuve OpenTimestamps
 
-`track_record_Equilibre.sha256.ots` ancre les hashs du manifest `track_record_Equilibre.sha256` sur la blockchain Bitcoin. La preuve est autonome : elle se vérifie contre la blockchain seule, sans dépendre d'aucun service en ligne.
+`track_record_Equilibre.sha256.ots` ancre les hashs du manifest `track_record_Equilibre.sha256` sur la blockchain Bitcoin.
 
-### Contrôler l'intégrité des fichiers
+### Vérifier la preuve (recommandé)
+
+Déposez `track_record_Equilibre.sha256.ots` sur https://opentimestamps.org/ avec le manifest
+`track_record_Equilibre.sha256`. Le site confirme le bloc Bitcoin qui horodate le plan, sans
+rien installer, sur n'importe quel système.
+
+### Contrôler l'intégrité des fichiers (optionnel)
 
 ```bash
 tr -d '\r' < track_record_Equilibre.sha256 | sha256sum -c -
 ```
 
-Le `tr -d '\r'` neutralise les fins de ligne Windows du manifest. Chaque
-fichier scellé doit afficher `OK`. Cette vérification ne dépend d'aucun
-service extérieur et reste disponible en permanence.
+Le `tr -d '\r'` retire d'éventuelles fins de ligne Windows du manifest. Il ne
+change rien quand il n'y en a pas, donc cette forme fonctionne quel que soit le
+fichier. Chaque fichier scellé doit afficher `OK`.
 
-### Vérifier l'ancrage Bitcoin
+### Vérifier en ligne de commande (optionnel)
 
 ```bash
 pip install opentimestamps-client
@@ -36,27 +42,13 @@ ots verify track_record_Equilibre.sha256.ots track_record_Equilibre.sha256
 ```
 
 `ots verify` indique le bloc Bitcoin depuis lequel le manifest n'a pas bougé.
-Le client `ots` est instable sous Windows.
+Le client `ots` est instable sous Windows : dans ce cas, utilisez le
+vérificateur web ci-dessus. Le mois entre la génération du plan et sa
+publication interdit de le réécrire selon le marché.
 
-### Vérificateur web (quand il est en ligne)
+## Les résultats
 
-Vous pouvez aussi déposer `track_record_Equilibre.sha256.ots` avec le manifest
-`track_record_Equilibre.sha256` sur https://opentimestamps.org/, qui confirme le
-bloc Bitcoin en glisser-déposer sans rien installer. Ce service tiers connaît
-des interruptions ; les deux vérifications ci-dessus, elles, restent
-disponibles.
-
-Le mois entre la génération du plan et sa publication interdit de le réécrire
-selon le marché.
-
-## Résultats du mois
-
-- Capital initial : 20 000,00 €
-- Total investi : 3 996,79 €
-- Valeur des positions : 3 442,32 €
-- Rendement : -13,87 % (DCA miroir : -1,14 %)
-- Triggers déclenchés : —
-
-## Suivi en direct
+Ils ne sont pas dans ce dépôt, qui porte les décisions et leurs preuves.
+Rendements, pertes maximales et comparaison avec un investissement automatique :
 
 https://getclarveo.com/performance/

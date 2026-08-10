@@ -17,37 +17,11 @@ plusieurs semaines avant cette publication.
 
 ## Comment vérifier l'authenticité
 
-Chaque profil contient :
+La procédure complète est décrite une seule fois, à la racine du dépôt :
+[README.md](../README.md).
 
-- `aggregated_plan.md` — plan détaillé issu du pipeline R1→R3
-- `dca_schedule_<profile>.json` — planning DCA hebdomadaire
-- `active_triggers_<profile>.json` — triggers conditionnels surveillés
-- `track_record_<profile>.sha256` — hashes SHA256 des 3 fichiers ci-dessus
-  au format `sha256sum -c`
-- `track_record_<profile>.sha256.ots` — preuve OpenTimestamps ancrée sur
-  la blockchain Bitcoin
+Elle y est maintenue à un seul endroit, donc un seul endroit peut se
+tromper. Ce fichier ne la recopie pas.
 
-### Étapes de vérification
-
-```bash
-# Installer le client OpenTimestamps
-pip install opentimestamps-client
-
-# Se placer dans le dossier d'un profil
-cd <profile>/
-
-# 1. Vérifier l'intégrité des 3 fichiers contre le manifest
-sha256sum -c track_record_<profile>.sha256
-
-# 2. (optionnel) Récupérer la preuve Bitcoin complète
-ots upgrade track_record_<profile>.sha256.ots
-
-# 3. Vérifier que la preuve correspond bien au manifest
-ots verify track_record_<profile>.sha256.ots
-```
-
-La preuve `.ots` confirme que les hashes du manifest existaient bien dans
-leur version exacte au moment où le pipeline R1→R3 les a soumis aux
-calendars OpenTimestamps. La fenêtre de réserve d'un mois entre la
-génération du plan et sa publication garantit qu'aucun plan ne peut
-être ré-écrit a posteriori en fonction de la performance du marché.
+Le dossier de chaque profil contient son propre README, avec les empreintes
+du mois et le rappel des commandes.
