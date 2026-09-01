@@ -1,0 +1,110 @@
+{
+  "user_id": "Defensif",
+  "month": "2026-08",
+  "direction": "acheteur",
+  "consensus": "3/3",
+  "generated_at": "2026-08-02 13:21",
+  "total_runs": 3,
+  "triggers_pause": [
+    {
+      "condition": "Si contagion ≥ 40 : Stopper tout déploiement restant jusqu'au prochain run mensuel",
+      "source_runs": 2,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "contagion"
+      ],
+      "threshold": 40.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si us10y ≥ 4.75 : Suspendre les tranches SWRD, CSPX et EIMI non exécutées et réévaluer le risque de duration",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "us10y"
+      ],
+      "threshold": 4.75,
+      "direction": "above"
+    },
+    {
+      "condition": "Si vix ≥ 25 : Suspendre tous les achats restants pendant 48h et réévaluer la corrélation entre actifs",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 25.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si dxy ≥ 103 : Suspendre la ligne EIMI restante (sensibilité émergents au dollar)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "dxy"
+      ],
+      "threshold": 103.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si btc_price_eur ≤ 48000 : Stopper les achats BTC et vérifier l'existence d'une liquidation systémique",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_price_eur"
+      ],
+      "threshold": 48000.0,
+      "direction": "below"
+    },
+    {
+      "condition": "Si stablecoin_depeg ≥ 0.50 : Suspendre la tranche BTC de la semaine — signal de stress de contrepartie crypto",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "stablecoin_depeg"
+      ],
+      "threshold": 0.5,
+      "direction": "above"
+    },
+    {
+      "condition": "us10y : Publication CPI US juillet : si surprise haussière confirmée par le 10Y, suspendre les ordres restants",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "us10y"
+      ],
+      "threshold": 4.9,
+      "direction": "above"
+    },
+    {
+      "condition": "Si oil_wti ≥ 95 : Suspendre le DCA CSPX, maintenir XDWS uniquement",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "oil_wti"
+      ],
+      "threshold": 95.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si gold_usd ≤ 3900 : Suspendre les tranches CSPX restantes, confirmation du repricing taux réels",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "gold_usd"
+      ],
+      "threshold": 3900.0,
+      "direction": "below"
+    }
+  ],
+  "triggers_acceleration": []
+}

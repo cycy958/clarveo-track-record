@@ -1,0 +1,144 @@
+{
+  "user_id": "Equilibre",
+  "month": "2026-08",
+  "direction": "acheteur",
+  "consensus": "2/2",
+  "generated_at": "2026-08-02 13:56",
+  "total_runs": 2,
+  "triggers_pause": [
+    {
+      "condition": "Si us10y ≥ 5.00 : Suspendre les achats CNDX — matérialisation du repricing de duration (4,68% actuellement)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "us10y"
+      ],
+      "threshold": 5.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si oil_wti ≥ 95 : Suspendre les achats CNDX et SWRD — prolongation du choc inflationniste amont (84,67 actuellement)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "oil_wti"
+      ],
+      "threshold": 95.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si stablecoin_depeg ≥ 0.75 : Suspendre tous les achats crypto — écart très au-dessus du bruit naturel de 0,1 à 0,3%",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "stablecoin_depeg"
+      ],
+      "threshold": 0.75,
+      "direction": "above"
+    },
+    {
+      "condition": "Si funding_eth ≥ 25 : Suspendre tous les achats crypto — risque de cascade de liquidations non mesurable sans open interest",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "funding_eth"
+      ],
+      "threshold": 25.0,
+      "direction": "above"
+    },
+    {
+      "condition": "— : Run mensuel du 6 septembre 2026 : réévaluer flux ETF spot BTC, pétrole, US10Y, MACD daily et publication CPI",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    },
+    {
+      "condition": "Si vix ≥ 25 : Suspendre toutes les tranches restantes — rupture nette vs snapshots 12 mois compris entre 16,18 et 18,69",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 25.0,
+      "direction": "above"
+    },
+    {
+      "condition": "us10y : Publication CPI US : si surprise haussière confirmée par US10Y > 4,80%, réévaluation manuelle des tranches restantes",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "us10y"
+      ],
+      "threshold": 4.8,
+      "direction": "above"
+    },
+    {
+      "condition": "Si contagion ≥ 40 : Suspendre les achats BTC — entrée en régime HIGH (8/100 actuellement)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "contagion"
+      ],
+      "threshold": 40.0,
+      "direction": "above"
+    }
+  ],
+  "triggers_acceleration": [
+    {
+      "condition": "Si mvrv ≤ 1.00 : Avancer les tranches crypto restantes, budget crypto plafonné à 400€",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "mvrv"
+      ],
+      "threshold": 1.0,
+      "direction": "below"
+    },
+    {
+      "condition": "Si fear_greed ≤ 15 : Achat BTC one-shot 300€ — vraie dislocation de sentiment, distincte de la peur stationnaire actuelle à 27",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "fear_greed"
+      ],
+      "threshold": 15.0,
+      "direction": "below"
+    },
+    {
+      "condition": "Si rsi_cndx ≤ 30 : Achat CNDX one-shot 200€ — seuil de forte survente du rapport (38 actuellement)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "rsi_cndx"
+      ],
+      "threshold": 30.0,
+      "direction": "below"
+    },
+    {
+      "condition": "Si rsi_CNDX ≤ 32 : Avancer la tranche CNDX de semaine 4, budget plafonné à 150€",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "rsi_CNDX"
+      ],
+      "threshold": 32.0,
+      "direction": "below"
+    }
+  ]
+}

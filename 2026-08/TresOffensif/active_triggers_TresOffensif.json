@@ -1,0 +1,88 @@
+{
+  "user_id": "TresOffensif",
+  "month": "2026-08",
+  "direction": "acheteur",
+  "consensus": "3/3",
+  "generated_at": "2026-08-02 15:09",
+  "total_runs": 3,
+  "triggers_pause": [
+    {
+      "condition": "Si contagion ≥ 40 : Suspendre tous les nouveaux achats crypto",
+      "source_runs": 3,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "contagion"
+      ],
+      "threshold": 40.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si vix ≥ 25 : Suspendre toutes les tranches BTC et ETF restantes",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 25.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si us10y ≥ 5.00 : Suspendre SWRD, SKYY et ETH",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "us10y"
+      ],
+      "threshold": 5.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si funding_eth ≥ 12 : Stopper toutes les tranches ETH",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "funding_eth"
+      ],
+      "threshold": 12.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si stablecoin_depeg ≥ 0.5 : STOP total du déploiement crypto",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "stablecoin_depeg"
+      ],
+      "threshold": 0.5,
+      "direction": "above"
+    },
+    {
+      "condition": "Si dxy ≥ 103 : Suspendre SWRD, SKYY et les tranches crypto restantes",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "dxy"
+      ],
+      "threshold": 103.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si btc_price_eur ≤ 44000 : Suspendre les achats crypto 48h et réévaluer (-20 % depuis 54 954€)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_price_eur"
+      ],
+      "threshold": 44000.0,
+      "direction": "below"
+    }
+  ],
+  "triggers_acceleration": []
+}

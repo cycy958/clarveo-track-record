@@ -1,0 +1,99 @@
+{
+  "user_id": "Offensif",
+  "month": "2026-08",
+  "direction": "acheteur",
+  "consensus": "3/3",
+  "generated_at": "2026-08-02 14:31",
+  "total_runs": 3,
+  "triggers_pause": [
+    {
+      "condition": "Si contagion ≥ 40 : Suspendre toutes les tranches régulières — passage de CALM à HIGH depuis un niveau actuel de 8/100",
+      "source_runs": 3,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "contagion"
+      ],
+      "threshold": 40.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si vix ≥ 25 : Suspendre toutes les tranches restantes : sortie du régime de volatilité calme et risque de recorrélation généralisée",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 25.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si us10y ≥ 5.0 : Suspendre SWRD et XDWS — scénario inflationniste avec pétrole au 96e percentile et duration sous pression",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "us10y"
+      ],
+      "threshold": 5.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si dxy ≥ 104 : Suspendre BTC et SWRD — couverture du risque de change EUR/USD non mesuré par le rapport",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "dxy"
+      ],
+      "threshold": 104.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si funding_eth ≥ 12 : Suspendre les achats ETH — accumulation de levier long",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "funding_eth"
+      ],
+      "threshold": 12.0,
+      "direction": "above"
+    },
+    {
+      "condition": "oil_wti : Surveillance humaine : transmission CPI, réévaluer les tranches ETF",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "oil_wti"
+      ],
+      "threshold": 100.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si btc_nasdaq_corr ≥ 0.60 : Suspendre les tranches crypto : la décorrélation au 2e percentile qui justifie la double exposition crypto + actions a disparu",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_nasdaq_corr"
+      ],
+      "threshold": 0.6,
+      "direction": "above"
+    },
+    {
+      "condition": "Si stablecoin_depeg ≥ 0.75 : Suspendre BTC et ETH : écart très supérieur aux 0.11% actuels, signal de stress sur le collatéral",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "stablecoin_depeg"
+      ],
+      "threshold": 0.75,
+      "direction": "above"
+    }
+  ],
+  "triggers_acceleration": []
+}
