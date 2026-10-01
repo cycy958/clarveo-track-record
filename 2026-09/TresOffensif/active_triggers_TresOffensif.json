@@ -1,0 +1,110 @@
+{
+  "user_id": "TresOffensif",
+  "month": "2026-09",
+  "direction": "acheteur",
+  "consensus": "3/3",
+  "generated_at": "2026-09-04 16:10",
+  "total_runs": 3,
+  "triggers_pause": [
+    {
+      "condition": "Si vix ≥ 25 : Suspendre les tranches restantes et réévaluer — entrée en volatilité élevée, proche du niveau J-180 de 26.64",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 25.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si stablecoin_depeg ≥ 0.75 : Suspendre les achats crypto",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "stablecoin_depeg"
+      ],
+      "threshold": 0.75,
+      "direction": "above"
+    },
+    {
+      "condition": "Si funding_eth ≥ 15 : Suspendre les achats ETH — entrée en zone de stress du levier",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "funding_eth"
+      ],
+      "threshold": 15.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si us10y ≥ 5.0 : Suspendre les tranches BTC/ETH — matérialise le risque de taux réels identifié par l'auditeur",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "us10y"
+      ],
+      "threshold": 5.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si gold_usd ≤ 3980 : Suspendre les tranches BTC/ETH — proxy avancé du risque BTC via corrélation 0.615 au 99e percentile",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "gold_usd"
+      ],
+      "threshold": 3980.0,
+      "direction": "below"
+    },
+    {
+      "condition": "Si oil_wti ≥ 100 : Suspendre tous les nouveaux achats — vélocité pétrole déjà au 95e percentile 30j",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "oil_wti"
+      ],
+      "threshold": 100.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si btc_nasdaq_corr ≥ 0.70 : Suspendre les achats crypto — normalisation de la corrélation, perte de la diversification",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_nasdaq_corr"
+      ],
+      "threshold": 0.7,
+      "direction": "above"
+    },
+    {
+      "condition": "— : FOMC 15-16 septembre 2026 (date à confirmer manuellement) : si ton hawkish, suspendre les tranches crypto restantes",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    },
+    {
+      "condition": "Si contagion ≥ 40 : Suspendre tout nouveau déploiement jusqu'au retour sous 40",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "contagion"
+      ],
+      "threshold": 40.0,
+      "direction": "above"
+    }
+  ],
+  "triggers_acceleration": []
+}

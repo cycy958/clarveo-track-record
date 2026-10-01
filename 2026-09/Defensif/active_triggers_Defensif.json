@@ -1,0 +1,99 @@
+{
+  "user_id": "Defensif",
+  "month": "2026-09",
+  "direction": "acheteur",
+  "consensus": "3/3",
+  "generated_at": "2026-09-04 13:46",
+  "total_runs": 3,
+  "triggers_pause": [
+    {
+      "condition": "Si us10y ≥ 5.00 : Suspendre les tranches ETF restantes — seuil psychologique précédant le scénario de stress 5,20% du RISK BRIEF",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "us10y"
+      ],
+      "threshold": 5.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si oil_wti ≥ 95 : Suspendre le DCA ETF Core restant jusqu'à réévaluation inflation",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "oil_wti"
+      ],
+      "threshold": 95.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si vix ≥ 22 : Suspendre les tranches restantes et réévaluer le régime — rupture nette du calme actuellement pricé à 14,15",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 22.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si gold_usd ≤ 4100 : Neutraliser le trigger d'achat BTC — cassure du trade de couverture monétaire qui porte la crypto (corr BTC-GOLD 0,615, 99e pct)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "gold_usd"
+      ],
+      "threshold": 4100.0,
+      "direction": "below"
+    },
+    {
+      "condition": "Si funding_btc ≥ 20 : Neutraliser le trigger d'achat BTC — doublement du funding vs 9,74% actuel signale une cascade de liquidations, pas un point d'entrée",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "funding_btc"
+      ],
+      "threshold": 20.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si stablecoin_depeg ≥ 0.5 : Suspendre ACCEL crypto et tranches DCA restantes — capteur direct de stress de liquidité, indice de contagion non fiable",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "stablecoin_depeg"
+      ],
+      "threshold": 0.5,
+      "direction": "above"
+    },
+    {
+      "condition": "— : Publication du CPI US d'août : si elle confirme le choc inflationniste avec pétrole et taux longs élevés, suspendre le DCA restant",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    },
+    {
+      "condition": "Si contagion ≥ 40 : Suspendre tous les achats restants",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "contagion"
+      ],
+      "threshold": 40.0,
+      "direction": "above"
+    }
+  ],
+  "triggers_acceleration": []
+}

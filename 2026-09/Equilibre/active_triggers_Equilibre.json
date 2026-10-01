@@ -1,0 +1,88 @@
+{
+  "user_id": "Equilibre",
+  "month": "2026-09",
+  "direction": "acheteur",
+  "consensus": "3/3",
+  "generated_at": "2026-09-04 14:32",
+  "total_runs": 3,
+  "triggers_pause": [
+    {
+      "condition": "Si vix ≥ 22 : Suspendre les tranches ETF restantes — sortie nette de la zone calme (VIX 14,11, 5e percentile 90j)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 22.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si us10y ≥ 5.00 : Suspendre SWRD, EIMI et XDWH — seuil abaissé de 5,20 pour agir avant réalisation complète du scénario taux",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "us10y"
+      ],
+      "threshold": 5.0,
+      "direction": "above"
+    },
+    {
+      "condition": "— : Publication CPI US de septembre : si surprise haussière avec tension sur les taux, suspendre les tranches S2-S4. Date à vérifier au calendrier officiel, non fournie par le rapport",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    },
+    {
+      "condition": "Si oil_wti ≥ 100 : Suspendre les tranches DCA ETF restantes — pétrole déjà au 96e percentile, +20.7% sur 30j",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "oil_wti"
+      ],
+      "threshold": 100.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si funding_btc ≥ 20 : Suspendre le one-shot BTC conditionnel",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "funding_btc"
+      ],
+      "threshold": 20.0,
+      "direction": "above"
+    },
+    {
+      "condition": "— : Réunion FOMC de septembre : si message hawkish, suspendre S3-S4. Date à vérifier au calendrier officiel, non fournie par le rapport",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    },
+    {
+      "condition": "Si contagion ≥ 40 : Suspendre toutes les tranches restantes et le one-shot BTC",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "contagion"
+      ],
+      "threshold": 40.0,
+      "direction": "above"
+    }
+  ],
+  "triggers_acceleration": []
+}

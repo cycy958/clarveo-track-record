@@ -1,0 +1,122 @@
+{
+  "user_id": "Offensif",
+  "month": "2026-09",
+  "direction": "acheteur",
+  "consensus": "2/2",
+  "generated_at": "2026-09-04 15:08",
+  "total_runs": 2,
+  "triggers_pause": [
+    {
+      "condition": "Si vix ≥ 28 : Suspendre le DCA restant — niveau du J-180 (26.64), stress test R1 ①",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 28.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si us10y ≥ 5.20 : Suspendre toutes les nouvelles tranches : rupture du narratif de détente monétaire",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "us10y"
+      ],
+      "threshold": 5.2,
+      "direction": "above"
+    },
+    {
+      "condition": "Si fear_greed ≥ 80 : Suspendre les tranches BTC restantes : entrée en avidité extrême",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "fear_greed"
+      ],
+      "threshold": 80.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si funding_btc ≥ 15 : Suspendre les tranches BTC restantes : accumulation de levier long",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "funding_btc"
+      ],
+      "threshold": 15.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si dxy ≥ 105 : Suspendre achats crypto et ETF — choc FX sur ~70% du portefeuille investi",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "dxy"
+      ],
+      "threshold": 105.0,
+      "direction": "above"
+    },
+    {
+      "condition": "Si mvrv ≥ 2.60 : Suspendre les tranches BTC restantes : base de coût on-chain dégradée",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "mvrv"
+      ],
+      "threshold": 2.6,
+      "direction": "above"
+    },
+    {
+      "condition": "Si btc_price_eur ≤ 55000 : Stopper le DCA BTC : cassure sous la zone J-30 convertie (55 819€)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_price_eur"
+      ],
+      "threshold": 55000.0,
+      "direction": "below"
+    },
+    {
+      "condition": "Si contagion ≥ 80 : Suspendre tout nouveau déploiement — seuil CRITICAL du garde-fou absolu",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "contagion"
+      ],
+      "threshold": 80.0,
+      "direction": "above"
+    }
+  ],
+  "triggers_acceleration": [
+    {
+      "condition": "Si btc_price_eur ≤ 56000 : Déployer 600€ additionnels sur BTC si contagion < 80 — repli vers l'ancrage J-30 (64 665$ ÷ 1.1585)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_price_eur"
+      ],
+      "threshold": 56000.0,
+      "direction": "below"
+    },
+    {
+      "condition": "Si vix ≥ 20 : Avancer une tranche SWRD et EIMI de 100€ chacune tant que VIX reste sous 28.5 : repli equity exploitable",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 20.0,
+      "direction": "above"
+    }
+  ]
+}
