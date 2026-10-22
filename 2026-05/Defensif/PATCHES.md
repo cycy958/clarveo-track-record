@@ -1,14 +1,14 @@
-# Patches runtime — Defensif — 2026-05
+# Corrections et précisions - Defensif - 2026-05
 
-> Ce fichier documente les corrections appliquées au plan **runtime** déployé sur la VM pendant le mois, en dehors du plan IA scellé OpenTimestamps (`track_record_*.sha256.ots`).
+> Ce fichier liste les corrections et les précisions apportées après le scellement du plan de ce mois.
 >
-> Le plan scellé reste l'engagement initial R3 du 1er du mois et n'est jamais modifié. Les patches ci-dessous corrigent des bugs détectés après scellement (anomalies de seuils, sémantique inversée, doublons exacts) sans toucher l'archive scellée.
+> Les fichiers scellés (`aggregated_plan.md`, `dca_schedule_<profil>.json`, `active_triggers_<profil>.json`) restent l'engagement d'origine. Ils ne sont jamais modifiés : une correction appliquée ensuite, ou une précision sur les données qui ont servi au plan, est notée ici, datée.
 >
-> Pour comprendre la démarche complète, voir le README de ce dossier.
+> Pour vérifier les fichiers scellés, voir le README de ce dossier.
 
-## Patches appliqués
+## Détail
 
-### 2026-05-10 — Phase J'''.b
+### 2026-05-10 - Phase J'''.b
 
-Seuil `btc_nasdaq_corr above 70.0` corrigé à `0.70` (format ratio Pearson [-1, 1], pas pourcentage). L'unité 70.0 ne pouvait jamais être atteinte donc le trigger était inactif — faux négatif structurel.
+Seuil `btc_nasdaq_corr above 70.0` corrigé à `0.70` (format ratio Pearson [-1, 1], pas pourcentage). L'unité 70.0 ne pouvait jamais être atteinte donc le trigger était inactif - faux négatif structurel.
 

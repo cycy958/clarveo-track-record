@@ -1,11 +1,11 @@
-# Patches runtime — TresOffensif — 2026-08
+# Corrections et précisions - TresOffensif - 2026-08
 
-> Ce fichier documente les corrections appliquées au plan **runtime** déployé sur la VM pendant le mois, en dehors du plan IA scellé OpenTimestamps (`track_record_*.sha256.ots`).
+> Ce fichier liste les corrections et les précisions apportées après le scellement du plan de ce mois.
 >
-> Le plan scellé reste l'engagement initial R3 du 1er du mois et n'est jamais modifié. Les patches ci-dessous corrigent des bugs détectés après scellement (anomalies de seuils, sémantique inversée, doublons exacts) sans toucher l'archive scellée.
+> Les fichiers scellés (`aggregated_plan.md`, `dca_schedule_<profil>.json`, `active_triggers_<profil>.json`) restent l'engagement d'origine. Ils ne sont jamais modifiés : une correction appliquée ensuite, ou une précision sur les données qui ont servi au plan, est notée ici, datée.
 >
-> Pour comprendre la démarche complète, voir le README de ce dossier.
+> Pour vérifier les fichiers scellés, voir le README de ce dossier.
 
-## Aucun patch runtime ce mois
+## Aucune correction ni précision ce mois
 
-Le plan déployé est identique au plan scellé du 1er du mois.
+Le plan appliqué est celui qui a été scellé.
