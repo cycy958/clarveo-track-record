@@ -16,18 +16,17 @@ Un dossier par mois, et dans chacun un dossier par profil de risque.
 ├── Defensif/
 │   ├── aggregated_plan.md               le plan du mois, tel que produit
 │   ├── dca_schedule_<profil>.json       les achats prévus, semaine par semaine
-│   ├── active_triggers_<profil>.json    les seuils qui peuvent suspendre ou accélérer
+│   ├── active_triggers_<profil>.json    les seuils qui peuvent suspendre un achat ou déclencher une vente (et, jusqu'en septembre 2026, accélérer)
 │   ├── track_record_<profil>.sha256     l'empreinte des fichiers scellés
 │   ├── track_record_<profil>.sha256.ots la preuve d'horodatage
-│   ├── README.md                        le détail du dossier
-│   └── PATCHES.md                       les correctifs appliqués après scellement
+│   └── README.md                        le détail du dossier
 ├── Equilibre/
 ├── Offensif/
 └── TresOffensif/
 ```
 
 Le plan, le calendrier d'achat et les seuils sortent du pipeline le jour où le
-signal est produit. Les deux derniers fichiers sont écrits plus tard, et c'est
+signal est produit. Le README du dossier est écrit plus tard, et c'est
 justement le sujet de la section suivante.
 
 ## Ce qui est scellé, et ce qui ne l'est pas
@@ -38,14 +37,9 @@ Tout n'est pas scellé, et je préfère le dire que le laisser découvrir.
 couverts par la preuve, et lui seul en décide. Ouvrez-le : ce que vous y lisez
 est scellé, le reste ne l'est pas.
 
-Les fichiers que j'écris après coup n'en font pas partie. Le README du dossier
-et le journal des correctifs sont rédigés une fois le mois passé, donc les
-inclure n'aurait aucun sens : ils n'existaient pas au moment du scellement.
-
-Ça veut dire quelque chose de précis. Un correctif noté dans `PATCHES.md` n'est
-pas couvert par la preuve, et il n'a pas à l'être : il documente ce qui a été
-changé sur le système en cours de mois, pendant que le plan scellé, lui, ne
-bouge pas. Si les deux racontaient la même chose, l'un des deux serait inutile.
+Le fichier que j'écris après coup n'en fait pas partie. Le README du dossier
+est rédigé une fois le mois passé, donc l'inclure n'aurait aucun sens : il
+n'existait pas au moment du scellement.
 
 ## Vérifier une preuve
 
