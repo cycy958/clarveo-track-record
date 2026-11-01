@@ -1,0 +1,211 @@
+{
+  "user_id": "Offensif",
+  "session": "session_2026_10",
+  "month": "2026-10",
+  "direction": "acheteur",
+  "consensus": "2/2",
+  "confidence": 0.72,
+  "generated_at": "2026-10-02 12:54",
+  "total_deployment": 2900.0,
+  "weeks": [
+    {
+      "week": 1,
+      "date_start": "2026-10-05",
+      "date_end": "2026-10-11",
+      "orders": [
+        {
+          "asset": "BTC",
+          "short_name": "Bitcoin",
+          "amount_eur": 100,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "EIMI",
+          "short_name": "Marchés Émergents",
+          "amount_eur": 200,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "SWRD",
+          "short_name": "MSCI World",
+          "amount_eur": 100,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "XDWH",
+          "short_name": "Santé",
+          "amount_eur": 200,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "XDWS",
+          "short_name": "Consommation",
+          "amount_eur": 100,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        }
+      ],
+      "total": 700,
+      "conditions": null
+    },
+    {
+      "week": 2,
+      "date_start": "2026-10-12",
+      "date_end": "2026-10-18",
+      "orders": [
+        {
+          "asset": "BTC",
+          "short_name": "Bitcoin",
+          "amount_eur": 100,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "EIMI",
+          "short_name": "Marchés Émergents",
+          "amount_eur": 200,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "SWRD",
+          "short_name": "MSCI World",
+          "amount_eur": 100.0,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "XDWH",
+          "short_name": "Santé",
+          "amount_eur": 200,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "XDWS",
+          "short_name": "Consommation",
+          "amount_eur": 100,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        }
+      ],
+      "total": 700.0,
+      "conditions": null
+    },
+    {
+      "week": 3,
+      "date_start": "2026-10-19",
+      "date_end": "2026-10-25",
+      "orders": [
+        {
+          "asset": "BTC",
+          "short_name": "Bitcoin",
+          "amount_eur": 100,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "EIMI",
+          "short_name": "Marchés Émergents",
+          "amount_eur": 200,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "XDWH",
+          "short_name": "Santé",
+          "amount_eur": 200,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "XDWS",
+          "short_name": "Consommation",
+          "amount_eur": 100,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        }
+      ],
+      "total": 600,
+      "conditions": null
+    },
+    {
+      "week": 4,
+      "date_start": "2026-10-26",
+      "date_end": "2026-11-01",
+      "orders": [
+        {
+          "asset": "BTC",
+          "short_name": "Bitcoin",
+          "amount_eur": 100.0,
+          "platform": "Crypto.com",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "EIMI",
+          "short_name": "Marchés Émergents",
+          "amount_eur": 300.0,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "XDWH",
+          "short_name": "Santé",
+          "amount_eur": 300.0,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        },
+        {
+          "asset": "XDWS",
+          "short_name": "Consommation",
+          "amount_eur": 200.0,
+          "platform": "CTO",
+          "order_type": "market",
+          "price_zone": null,
+          "note": null
+        }
+      ],
+      "total": 900.0,
+      "conditions": null
+    }
+  ],
+  "sells": []
+}

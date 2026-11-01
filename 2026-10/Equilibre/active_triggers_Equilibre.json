@@ -1,0 +1,168 @@
+{
+  "user_id": "Equilibre",
+  "month": "2026-10",
+  "direction": "acheteur",
+  "consensus": "3/3",
+  "generated_at": "2026-10-02 12:26",
+  "total_runs": 3,
+  "triggers_pause": [
+    {
+      "condition": "— : 27-29 octobre 2026 : FOMC puis BCE, taux longs, dollar, volatilité",
+      "source_runs": 2,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    },
+    {
+      "condition": "Si us10y ≥ 5.55 : TOUS : prolongation du signal taux extrême vers le scénario de stress 5.6-5.75%",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "us10y"
+      ],
+      "threshold": 5.55,
+      "direction": "above",
+      "pause_assets": [
+        "ALL"
+      ]
+    },
+    {
+      "condition": "Si vix ≥ 25 : TOUS : sortie du régime de volatilité normale",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 25.0,
+      "direction": "above",
+      "pause_assets": [
+        "ALL"
+      ]
+    },
+    {
+      "condition": "Si dxy ≥ 104 : EIMI : dollar fort pénalisant les émergents",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "dxy"
+      ],
+      "threshold": 104.0,
+      "direction": "above",
+      "pause_assets": []
+    },
+    {
+      "condition": "🔔 Si funding_btc ≥ 15 : Levier crypto excessif, risque de liquidations sur les positions BTC/ETH détenues",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "funding_btc"
+      ],
+      "threshold": 15.0,
+      "direction": "above",
+      "pause_assets": []
+    },
+    {
+      "condition": "🔔 Si btc_nasdaq_corr ≥ 0.70 : Perte du bénéfice de diversification crypto-actions",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_nasdaq_corr"
+      ],
+      "threshold": 0.7,
+      "direction": "above",
+      "pause_assets": []
+    },
+    {
+      "condition": "🔔 Si dxy ≤ 100 : Disparition du coussin dollar si les taux US restent élevés (scénario double peine)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "dxy"
+      ],
+      "threshold": 100.0,
+      "direction": "below",
+      "pause_assets": []
+    },
+    {
+      "condition": "— : 7 octobre 2026 : minutes de la Fed, réaction du US10Y",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    },
+    {
+      "condition": "Si rsi_btc ≥ 75 : BTC : surachat fort combiné au levier, risque de purge",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "rsi_btc"
+      ],
+      "threshold": 75.0,
+      "direction": "above",
+      "pause_assets": []
+    },
+    {
+      "condition": "— : NFP 2 octobre 2026 : réaction du 10Y vs 5.29% avant S1",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    },
+    {
+      "condition": "— : Minutes Fed 7 octobre 2026 : ton sur les taux",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    },
+    {
+      "condition": "— : BCE 28-29 octobre 2026 : ton monétaire, ETF européens et défensifs",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    },
+    {
+      "condition": "Si contagion ≥ 40 : TOUS : stress systémique crédit/stablecoins (zone HIGH)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "contagion"
+      ],
+      "threshold": 40.0,
+      "direction": "above",
+      "pause_assets": [
+        "ALL"
+      ]
+    }
+  ],
+  "triggers_sell": []
+}

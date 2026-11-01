@@ -1,0 +1,158 @@
+{
+  "user_id": "Offensif",
+  "month": "2026-10",
+  "direction": "acheteur",
+  "consensus": "2/2",
+  "generated_at": "2026-10-02 12:54",
+  "total_runs": 2,
+  "triggers_pause": [
+    {
+      "condition": "- : FOMC 27-28/10 puis BCE 28-29/10 : revue humaine avant le run du 01/11",
+      "source_runs": 2,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "-"
+      ],
+      "threshold": null,
+      "direction": "-"
+    },
+    {
+      "condition": "Si us10y ≥ 5.60 : TOUS : prolongation du choc de taux déjà classé extrême à 5,29%",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "us10y"
+      ],
+      "threshold": 5.6,
+      "direction": "above",
+      "pause_assets": [
+        "ALL"
+      ]
+    },
+    {
+      "condition": "Si vix ≥ 25 : TOUS : bascule d'un marché calme vers un régime de stress",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 25.0,
+      "direction": "above",
+      "pause_assets": [
+        "ALL"
+      ]
+    },
+    {
+      "condition": "Si funding_btc ≥ 15 : BTC : levier long environ deux fois supérieur au niveau actuel déjà élevé",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "funding_btc"
+      ],
+      "threshold": 15.0,
+      "direction": "above",
+      "pause_assets": [
+        "BTC"
+      ]
+    },
+    {
+      "condition": "Si dxy ≥ 105 : EIMI : dollar fort défavorable aux émergents, niveau du stress macro R1",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "dxy"
+      ],
+      "threshold": 105.0,
+      "direction": "above",
+      "pause_assets": []
+    },
+    {
+      "condition": "🔔 Si fear_greed ≥ 80 : entrée en zone contrarienne",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "fear_greed"
+      ],
+      "threshold": 80.0,
+      "direction": "above",
+      "pause_assets": []
+    },
+    {
+      "condition": "🔔 Si stablecoin_depeg ≥ 0.5 : premier signal de stress stablecoin, précurseur de contagion",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "stablecoin_depeg"
+      ],
+      "threshold": 0.5,
+      "direction": "above",
+      "pause_assets": []
+    },
+    {
+      "condition": "— : 2026-10-04 avant S1 : vérifier le NFP du 02/10 et la réaction du US10Y",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    },
+    {
+      "condition": "Si rsi_btc ≥ 75 : BTC : surachat marqué, renfort suspendu",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "rsi_btc"
+      ],
+      "threshold": 75.0,
+      "direction": "above",
+      "pause_assets": []
+    },
+    {
+      "condition": "🔔 Si btc_nasdaq_corr ≥ 0.70 : redondance crypto/actions forte, diversification réelle dégradée",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_nasdaq_corr"
+      ],
+      "threshold": 0.7,
+      "direction": "above",
+      "pause_assets": []
+    },
+    {
+      "condition": "— : 2026-10-27/29 Fed et BCE : taux, DXY, EUR/USD avant la fin du plan",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    },
+    {
+      "condition": "Si contagion ≥ 40 : BTC : passage en zone HIGH, stress systémique crypto",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "contagion"
+      ],
+      "threshold": 40.0,
+      "direction": "above",
+      "pause_assets": []
+    }
+  ],
+  "triggers_sell": []
+}

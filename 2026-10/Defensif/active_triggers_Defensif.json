@@ -1,0 +1,161 @@
+{
+  "user_id": "Defensif",
+  "month": "2026-10",
+  "direction": "acheteur",
+  "consensus": "3/3",
+  "generated_at": "2026-10-02 11:30",
+  "total_runs": 3,
+  "triggers_pause": [
+    {
+      "condition": "— : FOMC 27-28 octobre et BCE 28-29 octobre 2026 : surveiller taux, dollar et actions (semaine S4)",
+      "source_runs": 3,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    },
+    {
+      "condition": "Si us10y ≥ 5.50 : SWRD, EIMI, XDWH : accélération du repricing des taux au-delà de 5,29%, étape avant le stress test à 5,75%",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "us10y"
+      ],
+      "threshold": 5.5,
+      "direction": "above",
+      "pause_assets": [
+        "EIMI",
+        "SWRD",
+        "XDWH"
+      ]
+    },
+    {
+      "condition": "Si vix ≥ 25 : SWRD, EIMI, XDWH : sortie de la zone calme, frontière Risk-On du rapport",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 25.0,
+      "direction": "above",
+      "pause_assets": [
+        "EIMI",
+        "SWRD",
+        "XDWH"
+      ]
+    },
+    {
+      "condition": "Si dxy ≥ 104 : EIMI : un dollar fort pénalise directement les émergents (DXY 101,93, +2,4% sur 30j)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "dxy"
+      ],
+      "threshold": 104.0,
+      "direction": "above",
+      "pause_assets": [
+        "EIMI"
+      ]
+    },
+    {
+      "condition": "🔔 Si fear_greed ≥ 80 : Entrée en avidité extrême",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "fear_greed"
+      ],
+      "threshold": 80.0,
+      "direction": "above",
+      "pause_assets": []
+    },
+    {
+      "condition": "🔔 Si funding_btc ≥ 15 : Nouvelle accélération du levier long BTC (actuel 7.64% vs MA7 3.35%)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "funding_btc"
+      ],
+      "threshold": 15.0,
+      "direction": "above",
+      "pause_assets": []
+    },
+    {
+      "condition": "— : Minutes Fed 7 octobre 2026 : surveiller la réaction du 10Y avant la semaine S2",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    },
+    {
+      "condition": "— : NFP 2/10 : réaction du US10Y et du DXY avant la semaine 1",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    },
+    {
+      "condition": "🔔 Si btc_nasdaq_corr ≥ 0.70 : Perte supplémentaire de diversification crypto/actions",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_nasdaq_corr"
+      ],
+      "threshold": 0.7,
+      "direction": "above",
+      "pause_assets": []
+    },
+    {
+      "condition": "🔔 Si stablecoin_depeg ≥ 0.5 : Stress stablecoin ou dépositaire, signal précoce avant la contagion agrégée",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "stablecoin_depeg"
+      ],
+      "threshold": 0.5,
+      "direction": "above",
+      "pause_assets": []
+    },
+    {
+      "condition": "— : Minutes Fed 2026-10-07 : surveiller la réaction du 10Y et du dollar",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    },
+    {
+      "condition": "🔔 Si contagion ≥ 40 : Passage en zone HIGH, indice potentiellement sous-mesuré",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "contagion"
+      ],
+      "threshold": 40.0,
+      "direction": "above",
+      "pause_assets": []
+    }
+  ],
+  "triggers_sell": []
+}

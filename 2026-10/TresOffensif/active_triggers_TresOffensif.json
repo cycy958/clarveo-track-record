@@ -1,0 +1,191 @@
+{
+  "user_id": "TresOffensif",
+  "month": "2026-10",
+  "direction": "acheteur",
+  "consensus": "3/3",
+  "generated_at": "2026-10-02 13:21",
+  "total_runs": 3,
+  "triggers_pause": [
+    {
+      "condition": "— : FOMC 2026-10-27/28 et BCE 2026-10-28/29 : risque de prolongation du resserrement avant la semaine 4",
+      "source_runs": 2,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    },
+    {
+      "condition": "Si contagion ≥ 40 : BTC, ETH : passage en contagion HIGH, dégradation multi-composantes",
+      "source_runs": 2,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "contagion"
+      ],
+      "threshold": 40.0,
+      "direction": "above",
+      "pause_assets": [
+        "BTC",
+        "ETH"
+      ]
+    },
+    {
+      "condition": "Si us10y ≥ 5.55 : BTC, ETH, EIMI : accélération du taux long vers le scénario de stress macro",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "us10y"
+      ],
+      "threshold": 5.55,
+      "direction": "above",
+      "pause_assets": [
+        "ALL"
+      ]
+    },
+    {
+      "condition": "Si vix ≥ 25 : TOUS : sortie du régime de volatilité calme",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "vix"
+      ],
+      "threshold": 25.0,
+      "direction": "above",
+      "pause_assets": [
+        "ALL"
+      ]
+    },
+    {
+      "condition": "Si rsi_btc ≥ 75 : BTC : surachat avancé, renforcement suspendu",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "rsi_btc"
+      ],
+      "threshold": 75.0,
+      "direction": "above",
+      "pause_assets": [
+        "BTC"
+      ]
+    },
+    {
+      "condition": "Si funding_btc ≥ 15 : BTC, ETH : levier long saturé, risque de flush de liquidations",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "funding_btc"
+      ],
+      "threshold": 15.0,
+      "direction": "above",
+      "pause_assets": [
+        "BTC"
+      ]
+    },
+    {
+      "condition": "Si stablecoin_depeg ≥ 0.75 : BTC, ETH : stress crypto systémique",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "stablecoin_depeg"
+      ],
+      "threshold": 0.75,
+      "direction": "above",
+      "pause_assets": [
+        "BTC",
+        "ETH"
+      ]
+    },
+    {
+      "condition": "🔔 Si btc_nasdaq_corr ≥ 0.70 : Concentration factorielle crypto-actions (stress test 1)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_nasdaq_corr"
+      ],
+      "threshold": 0.7,
+      "direction": "above",
+      "pause_assets": []
+    },
+    {
+      "condition": "🔔 Si dxy ≥ 104 : Resserrement de la liquidité USD (stress test 3)",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "dxy"
+      ],
+      "threshold": 104.0,
+      "direction": "above",
+      "pause_assets": [
+        "EIMI"
+      ]
+    },
+    {
+      "condition": "🔔 Si btc_price_eur ≤ 61000 : BTC −20% : revue humaine d'un déploiement additionnel",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "btc_price_eur"
+      ],
+      "threshold": 61000.0,
+      "direction": "below",
+      "pause_assets": []
+    },
+    {
+      "condition": "Si fear_greed ≥ 80 : BTC, ETH : passage en avidité extrême",
+      "source_runs": 1,
+      "source": "main",
+      "type": "metric",
+      "metrics_to_watch": [
+        "fear_greed"
+      ],
+      "threshold": 80.0,
+      "direction": "above",
+      "pause_assets": []
+    },
+    {
+      "condition": "— : Minutes Fed 2026-10-07 : réaction du 10Y et du DXY avant la semaine 2",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    },
+    {
+      "condition": "— : NFP du 2 octobre 2026 non intégré au rapport : vérifier US10Y et VIX avant le 5/10",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    },
+    {
+      "condition": "— : Minutes Fed du 7 octobre 2026",
+      "source_runs": 1,
+      "source": "main",
+      "type": "event",
+      "metrics_to_watch": [
+        "—"
+      ],
+      "threshold": null,
+      "direction": "—"
+    }
+  ],
+  "triggers_sell": []
+}
