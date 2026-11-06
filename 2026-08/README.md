@@ -1,4 +1,4 @@
-# Track record — 2026-08
+# Track record : 2026-08
 
 Plans d'investissement publiés le 2026-09-01 pour le mois 2026-08.
 

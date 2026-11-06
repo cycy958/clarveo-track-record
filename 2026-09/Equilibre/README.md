@@ -1,4 +1,4 @@
-# Profil Équilibré — septembre 2026
+# Profil Équilibré : septembre 2026
 
 Ce dossier contient le plan d'investissement du mois. Il a été scellé sur
 Bitcoin via OpenTimestamps au moment de sa génération (run R1→R3), puis

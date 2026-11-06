@@ -10,6 +10,8 @@ Les chiffres sont sur le site.
 
 Un dossier par mois, et dans chacun un dossier par profil de risque.
 
+Les quatre profils sont des portefeuilles fictifs de démonstration. Leurs montants sont en euros pour rester lisibles.
+
 ```text
 <mois>/                                  au format AAAA-MM
 ├── README.md
