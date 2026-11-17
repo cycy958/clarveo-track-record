@@ -1,7 +1,7 @@
 # Profil Offensif : octobre 2026
 
 Ce dossier contient le plan d'investissement du mois. Il a été scellé sur
-Bitcoin via OpenTimestamps au moment de sa génération (run R1→R3), puis
+Bitcoin via OpenTimestamps au moment de sa génération (run R1 à R3), puis
 publié ici un mois plus tard.
 
 ## Fichiers scellés (OpenTimestamps)
@@ -10,7 +10,7 @@ publié ici un mois plus tard.
 |---------|-------------|--------|
 | `aggregated_plan.md` | Plan IA du mois | `1782b39b712ea4f18bfd697099d4126686d0d253ea524615ef09f1743bef7682` |
 | `dca_schedule_Offensif.json` | Planning DCA hebdomadaire | `c89ba6ca27c4bcafb91cc663faf812a5a50186e8395af32b641058d359481919` |
-| `active_triggers_Offensif.json` | Seuils triggers PAUSE / ACCEL | `ba0cc810fcd3cdb8946156ddc3226b429af4dbabb498ab6ed6f2d669e1cf4f39` |
+| `active_triggers_Offensif.json` | Seuils triggers PAUSE / SELL | `ba0cc810fcd3cdb8946156ddc3226b429af4dbabb498ab6ed6f2d669e1cf4f39` |
 
 Le manifest `track_record_Offensif.sha256` reprend ces hashs au format `sha256sum -c`.
 

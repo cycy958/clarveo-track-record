@@ -1,7 +1,7 @@
 # Profil Équilibré : octobre 2026
 
 Ce dossier contient le plan d'investissement du mois. Il a été scellé sur
-Bitcoin via OpenTimestamps au moment de sa génération (run R1→R3), puis
+Bitcoin via OpenTimestamps au moment de sa génération (run R1 à R3), puis
 publié ici un mois plus tard.
 
 ## Fichiers scellés (OpenTimestamps)
@@ -10,7 +10,7 @@ publié ici un mois plus tard.
 |---------|-------------|--------|
 | `aggregated_plan.md` | Plan IA du mois | `ee9b1518abe170332bf211419ad3c221f89a5129ec39db9b12ebfe5a448e6a1e` |
 | `dca_schedule_Equilibre.json` | Planning DCA hebdomadaire | `249a12a3675847d938392a851f7f405ec7d2950b6e3f096fd3ea784ad99868f1` |
-| `active_triggers_Equilibre.json` | Seuils triggers PAUSE / ACCEL | `25fff663efe82817004518d659f5f67011160dc0297c1c1cb2f40ebdb951bc20` |
+| `active_triggers_Equilibre.json` | Seuils triggers PAUSE / SELL | `25fff663efe82817004518d659f5f67011160dc0297c1c1cb2f40ebdb951bc20` |
 
 Le manifest `track_record_Equilibre.sha256` reprend ces hashs au format `sha256sum -c`.
 

@@ -1,7 +1,7 @@
 # Profil Équilibré : juillet 2026
 
 Ce dossier contient le plan d'investissement du mois. Il a été scellé sur
-Bitcoin via OpenTimestamps au moment de sa génération (run R1→R3), puis
+Bitcoin via OpenTimestamps au moment de sa génération (run R1 à R3), puis
 publié ici un mois plus tard.
 
 ## Fichiers scellés (OpenTimestamps)

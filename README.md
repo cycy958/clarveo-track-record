@@ -14,17 +14,17 @@ Les quatre profils sont des portefeuilles fictifs de démonstration. Leurs monta
 
 ```text
 <mois>/                                  au format AAAA-MM
-├── README.md
-├── Defensif/
-│   ├── aggregated_plan.md               le plan du mois, tel que produit
-│   ├── dca_schedule_<profil>.json       les achats prévus, semaine par semaine
-│   ├── active_triggers_<profil>.json    les seuils qui peuvent suspendre un achat ou déclencher une vente (et, jusqu'en septembre 2026, accélérer)
-│   ├── track_record_<profil>.sha256     l'empreinte des fichiers scellés
-│   ├── track_record_<profil>.sha256.ots la preuve d'horodatage
-│   └── README.md                        le détail du dossier
-├── Equilibre/
-├── Offensif/
-└── TresOffensif/
+|-- README.md
+|-- Defensif/
+|   |-- aggregated_plan.md               le plan du mois, tel que produit
+|   |-- dca_schedule_<profil>.json       les achats prévus, semaine par semaine
+|   |-- active_triggers_<profil>.json    les seuils qui peuvent suspendre un achat ou déclencher une vente (et, jusqu'en septembre 2026, accélérer)
+|   |-- track_record_<profil>.sha256     l'empreinte des fichiers scellés
+|   |-- track_record_<profil>.sha256.ots la preuve d'horodatage
+|   `-- README.md                        le détail du dossier
+|-- Equilibre/
+|-- Offensif/
+`-- TresOffensif/
 ```
 
 Le plan, le calendrier d'achat et les seuils sortent du pipeline le jour où le
